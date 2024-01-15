@@ -1,0 +1,267 @@
+body {
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1170px;
+    margin: auto;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+:root {
+    --dark_blue: #131318;
+    --gray: #424247;
+    --gray2: #5A5A5D;
+    --light_blue: rgba(19, 19, 24, 0.70);
+    --btn_bg: #FF5400;
+}
+/* share class */
+.primary_btn{
+    padding: 16px 35px;
+    background-color: var(--btn_bg);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+/* header part */
+header {
+    position: sticky;
+    top: 0;
+
+}
+
+.nav_container {
+    background: #fff;
+    margin: 50px 0 20px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company_name {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 16px;
+    align-items: center;
+}
+
+.company_name p {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--dark_blue);
+}
+
+.company_name p span {
+    color: var(--btn_bg);
+}
+
+.hambarger {
+    position: relative;
+    margin: 11px 10px 0px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    display: none;
+}
+
+.menu_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_container li {
+    position: relative;
+    list-style-type: none;
+    margin: 0px 10px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--gray);
+    text-align: center;
+}
+
+.menu_container li:first-child {
+    color: var(--btn_bg);
+    font-weight: 700;
+}
+
+#close {
+    display: none;
+}
+
+/* ----Banner------ */
+.first_banner {
+    position: relative;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    background: url('Images/Group\ 13\ \(1\)\ \(1\).png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.first_banner h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.first_banner p {
+    max-width: 676px;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.first_form {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.first_form input,
+.first_form select {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(19, 19, 24, 0.50);
+    border: none;
+    outline: none;
+    text-align: left;
+    border-radius: 8px;
+    border: 1px solid rgb(143, 143, 13);
+}
+
+
+.first_form select option {
+    color: #424247;
+}
+
+.first_form input:focus,
+.first_form select:focus {
+    color: var(--dark_blue);
+    border: none;
+    outline: none;
+}
+
+.first_form button {
+    width: 100%;
+    padding: 16px 25px;
+    background-color: var(--btn_bg);
+    color: #fff;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* --------------Populer Tours---------------- */
+
+/*------------- responsive design-------------- */
+@media screen and (max-width:1180px) {
+    .first_banner {
+        margin: 0 10px;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .first_banner h1{
+        margin-bottom: 16px;
+        font-size: 3rem;
+    }
+    .first_banner p{
+        margin-bottom: 20px;
+    }
+    .first_form {
+        flex-direction: column;
+        gap: 16px;
+        width: 50%;
+    }
+
+   .first_form input{
+    width: 90%;
+   }
+
+
+}
+
+@media screen and (max-width:768px) {
+
+    .hambarger {
+        display: flex;
+    }
+
+    .nav_container {
+        flex-direction: column;
+
+    }
+
+    .menu_container {
+        top: 80px;
+        position: absolute;
+        margin-right: 10px;
+        flex-direction: column;
+        padding: 60px 0px;
+        width: 100%;
+        height: 100vh;
+        background: rgb(5, 42, 66);
+        display: none;
+    }
+
+    .menu_container li {
+        padding: 20px 0px;
+        color: #fff;
+    }
+
+    #close {
+        display: inline-block;
+        position: absolute;
+        right: -5px;
+        top: -8px;
+    }
+}
+@media screen  and (max-width:480px){
+    .first_banner h1{
+        margin-bottom: 16px;
+        font-size: 2rem;
+    }
+    .first_form input{
+        width: 85%;
+       }
+}

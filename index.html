@@ -1,21 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divine Travel Agency</title>
     <!-- fab icon -->
     <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/28c020b767.js" crossorigin="anonymous"></script>
+    <!-- my css -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-
+        <nav class="nav_container">
+            <div class="logo">
+                <div class="company_name"><img src="Images/icon.png" alt="icon">
+                    <p>Divine <span>Travel </span></p>
+                </div>
+                <div class="hambarger" onclick="myFunction()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <ul class="menu_container" id="onclick_menu_action">
+                <li>Home</li>
+                <li>Packages</li>
+                <li>Testimonial</li>
+                <li>Blog</li>
+                <li>Contact</li>
+                <li id="close" onclick="myclose()"><i class="fa-solid fa-xmark"></i></li>
+            </ul>
+        </nav>
     </header>
+    <!-- main part -->
     <main>
-
+        <!-- banner -->
+        <div class="first_banner">
+            <h1>Explore Your Travel</h1>
+            <p>Dolor sit amet consectetur. Nullam suspendisse vitae ultricies dolor adipiscing. In et odio enim ac quis
+                sapien urna eu phasellus.</p>
+            <form action="#" class="first_form">
+                <input type="text" placeholder="Where go" required>
+                <select>
+                    <option>When</option>
+                    <option value="Today">Today</option>
+                    <option value="Tomorrow">Tomorrow</option>
+                    <option value="within7days">In this week</option>
+                    <option value="within7days">In this month</option>
+                </select>
+                <select>
+                    <option>Select Type </option>
+                    <option value="Business class">Business</option>
+                    <option value="Fast class">Fast class</option>
+                    <option value="">Economy</option>
+                </select>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i>Find Now</button>
+            </form>
+        </div>
+        <div class="populer_tour">
+        <div class="tour_details">
+            <h2>Our Popular Tours</h2>
+            <p>Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.</p>
+            <ul>
+                <li>Tempus euismod lacus mauris dignissim quis in ultrices. Magna nullam odio neque diam. Sociis erat at .</li>
+                <li>Tempus euismod lacus mauris dignissim quis in ultrices. Magna nullam odio neque diam. Sociis erat at .</li>
+                <li>Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. Lectus suspendisse nullam.</li>
+            </ul>
+            <p>Amet consectetur. Vulputate commodo felis molestie risus 
+                ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing risus natoque aliquet. Id bibendum nunc senectus semper tincidunt. </p>
+            <button class="primary_btn">Read More</button>
+        </div>
+        <img src="Images/Rectangle 4.png" alt="">
+    </div>
     </main>
     <footer>
-        
+
     </footer>
 </body>
+<script>
+    // menu bar action
+    function myFunction() {
+        document.getElementById("onclick_menu_action").style.display = "block";
+    }
+    function myclose() {
+        document.getElementById("onclick_menu_action").style.display = "none";
+    }
+</script>
+
 </html>
