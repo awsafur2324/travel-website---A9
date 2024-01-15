@@ -247,14 +247,16 @@ header {
 }
 
 /* -----------------Choose Your Destination----------------------- */
-.u_r_desition {
+.u_r_desition,
+.choose_us_container {
     width: 100%;
     margin: 0px auto;
     text-align: center;
     margin-top: 100px;
 }
 
-.u_r_desition h2 {
+.u_r_desition h2,
+.choose_us_container h2 {
     margin-top: 0px;
     color: var(--dark_blue);
     font-size: 2.5rem;
@@ -263,7 +265,8 @@ header {
     line-height: normal;
 }
 
-.u_r_desition p {
+.u_r_desition p,
+.choose_us_container p {
     margin: 0px auto;
     max-width: 643px;
     color: var(--light_blue);
@@ -347,33 +350,71 @@ header {
 
 }
 
-/*------------- responsive design-------------- */
+/* ----------------------Why Choose Us ------------------- */
+.choose_box {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    gap: 24px;
+}
+
+.top_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+.service_box{
+    background: rgba(233, 68, 68, 0.05);
+    padding: 32px 55px 32px 32px;
+    border-radius: 16px;
+    border: 1px solid rgba(251, 181, 99, 0.20);
+   
+}
+.service_last{
+    max-width: 500px;
+}
+/*-------------------- responsive design--------------------- */
 @media screen and (max-width:1180px) {
     .first_banner {
         margin: 0 10px;
         border-radius: 8px;
     }
 
+    .populer_tour {
+        padding: 0px 10px;
+    }
+
     .tour_img_container {
-        margin: 0px 10px;
+        margin: 50px 10px;
     }
 }
 
 @media screen and (max-width:950px) {
     .populer_tour {
         flex-direction: column;
-        padding: 0px 10px;
+
     }
 
     .tour_img_container {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .img_item1,
-    .img_item2,.img_item3,.img_item4,.img_item5,.img_item6,.img_item7 {
+    .img_item2,
+    .img_item3,
+    .img_item4,
+    .img_item5,
+    .img_item6,
+    .img_item7 {
         grid-column: span 1;
-    
+
     }
-   
+
 }
 
 @media screen and (max-width:800px) {
@@ -436,6 +477,13 @@ header {
 
     .tour_img_container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .top_box{
+        flex-direction: column;
+    }
+    .choose_box{
+        align-items: flex-start;
     }
 }
 
