@@ -31,8 +31,38 @@ p {
     line-height: 26px;
 }
 
+.u_r_desition,
+.choose_us_container,
+.deals_container {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.u_r_desition h2,
+.choose_us_container h2,
+.deals_container h2 {
+    margin-top: 0px;
+    color: var(--dark_blue);
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.u_r_desition p,
+.choose_us_container p,
+.deals_container p {
+    margin: 0px auto;
+    max-width: 643px;
+    color: var(--light_blue);
+}
+
+
 /* ---------------------header part ----------------------*/
 header {
+    width: 100%;
     position: sticky;
     top: 0;
     background: #fff;
@@ -247,30 +277,6 @@ header {
 }
 
 /* -----------------Choose Your Destination----------------------- */
-.u_r_desition,
-.choose_us_container {
-    width: 100%;
-    margin: 0px auto;
-    text-align: center;
-    margin-top: 100px;
-}
-
-.u_r_desition h2,
-.choose_us_container h2 {
-    margin-top: 0px;
-    color: var(--dark_blue);
-    font-size: 2.5rem;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-}
-
-.u_r_desition p,
-.choose_us_container p {
-    margin: 0px auto;
-    max-width: 643px;
-    color: var(--light_blue);
-}
 
 .tour_img_container {
     margin-top: 50px;
@@ -368,16 +374,125 @@ header {
     align-items: center;
     gap: 24px;
 }
-.service_box{
+
+.service_box {
     background: rgba(233, 68, 68, 0.05);
     padding: 32px 55px 32px 32px;
     border-radius: 16px;
     border: 1px solid rgba(251, 181, 99, 0.20);
-   
+    color: #5A5A5D;
 }
-.service_last{
+
+.service_last {
     max-width: 500px;
 }
+
+/* ---------------Deals & Discounts-------------------------- */
+
+.deals_one,
+.deals_two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 16px;
+    text-align: left;
+    margin: 25px 0px 0px;
+}
+
+.deals {
+    margin-top: 50px;
+}
+
+.deals_one {
+    background: url('Images/shadow.png'), url('Images/deals\ one.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: flex-end;
+
+}
+
+.deals_two {
+    background: url('Images/shadow.png'), url('Images/deals\ two.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: flex-start;
+}
+
+.details_container {
+
+    border-radius: 16px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.80);
+    padding: 50px;
+}
+
+.deals_one .details_container {
+    margin: 55px 55px 55px 0px;
+}
+
+.deals_two .details_container {
+    margin: 55px 0px 55px 55px;
+}
+
+.deals_container ul {
+    position: relative;
+    display: flex;
+    margin-left: -40px;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #5A5A5D;
+flex-wrap: wrap;
+}
+
+.details_container ul li {
+    text-align: left;
+}
+
+.details_container ul li i {
+    color: var(--btn_bg);
+}
+
+.details_container h2 {
+    font-size: 1.5rem;
+    color: var(--dark_blue);
+    font-style: normal;
+    font-weight: 800;
+}
+
+.details_container h2 span {
+    color: var(--btn_bg);
+    font-size: 1.25rem;
+}
+
+.details_container p {
+    position: relative;
+    max-width: 452px;
+    color: #5A5A5D;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 10px;
+    max-height: 80px;
+    overflow: hidden;
+}
+
+.details_container button {
+    font-size: 1.25rem;
+}
+
+.deals_btn {
+    margin-top: 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+}
+
 /*-------------------- responsive design--------------------- */
 @media screen and (max-width:1180px) {
     .first_banner {
@@ -392,6 +507,13 @@ header {
     .tour_img_container {
         margin: 50px 10px;
     }
+
+    .deals_one,
+    .deals_two {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
 }
 
 @media screen and (max-width:950px) {
@@ -479,11 +601,22 @@ header {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .top_box{
+    .top_box {
         flex-direction: column;
     }
-    .choose_box{
+
+    .choose_box {
         align-items: flex-start;
+    }
+
+    .deals_one,
+    .deals_two {
+        align-items: center;
+    }
+
+    .deals_one .details_container,
+    .deals_two .details_container {
+        margin: 50px 10px;
     }
 }
 
