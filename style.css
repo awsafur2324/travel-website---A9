@@ -502,8 +502,8 @@ header {
 .perfect_place_container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     margin-top: 100px;
     gap: 50px;
 }
@@ -511,13 +511,14 @@ header {
 .right_place {
     position: relative;
     margin-top: -50px;
+    max-width: 600px;
 }
 
 .right_place h2,
 .letter_form_right h2 {
     position: relative;
     color: var(--dark_blue);
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 800;
 }
@@ -528,7 +529,7 @@ header {
     font-size: 1rem;
     font-weight: 400;
     line-height: 26px;
-    margin: 24px 0px;
+    margin: 0px 0px;
 }
 
 .right_place ul {
@@ -551,11 +552,11 @@ header {
 
 .left_place {
     position: relative;
-
 }
 
 .left_place video {
     border-radius: 16px;
+   
 }
 
 .left_place p {
@@ -721,6 +722,7 @@ header {
     width: calc(100% - 40px);
     padding: 20px;
     color: var(--dark_blue);
+    background: rgba(19, 19, 24, 0.05);
 }
 
 .letter_form_right form button {
